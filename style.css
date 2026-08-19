@@ -1,29 +1,20 @@
 /* ==========================================================================
-   1. Root Variables & Reset
+   1. Root Variables & Resets
    ========================================================================== */
 :root {
-  /* Color Palette */
-  --primary-color: #8b0000;      /* Deep Imperial Red */
-  --primary-hover: #a50000;
-  --accent-color: #d4af37;       /* Elegant Gold */
-  --bg-light: #fdfbf7;           /* Off-white parchment tone */
+  --primary-color: #8b0000;      /* Imperial Red */
+  --accent-color: #d4af37;       /* Gold Accent */
+  --bg-light: #fdfbf7;           /* Parchment background */
   --bg-card: #ffffff;
   --text-dark: #2c2c2c;
   --text-muted: #666666;
   --border-color: #e2dcd5;
-
-  /* Typography */
   --font-heading: 'Georgia', 'Times New Roman', serif;
-  --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-
-  /* Layout */
+  --font-body: system-ui, -apple-system, sans-serif;
   --max-width: 1100px;
-  --transition-speed: 0.3s;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -39,52 +30,33 @@ body {
   min-height: 100vh;
 }
 
-main {
-  flex: 1;
-}
+main { flex: 1; }
 
 /* ==========================================================================
-   2. Hero Header
+   2. Shared Header & Hero
    ========================================================================== */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
               url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
   color: #ffffff;
   text-align: center;
-  padding: 5rem 1.5rem;
+  padding: 4rem 1.5rem;
 }
 
-.hero-overlay {
-  max-width: 800px;
-  margin: 0 auto;
-}
+.hero-overlay { max-width: 800px; margin: 0 auto; }
 
 .hero h1 {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: 2px;
   color: var(--accent-color);
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
 }
 
-.hero .tagline {
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  margin-bottom: 0.75rem;
-  color: #f0f0f0;
-}
+.hero .tagline { font-size: 1.1rem; letter-spacing: 1px; color: #f0f0f0; }
+.hero .vietnamese-tagline { font-style: italic; font-size: 0.9rem; opacity: 0.9; }
 
-.hero .vietnamese-tagline {
-  font-style: italic;
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-/* ==========================================================================
-   3. Navigation Bar
-   ========================================================================== */
+/* Navigation */
 .navbar {
   background-color: var(--primary-color);
   position: sticky;
@@ -104,7 +76,7 @@ main {
 
 .logo {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--accent-color);
 }
@@ -118,136 +90,95 @@ main {
   cursor: pointer;
 }
 
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
+.nav-links { display: flex; gap: 1.5rem; }
 
 .nav-links a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
-  transition: color var(--transition-speed);
-  position: relative;
+  transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--accent-color);
 }
 
 /* ==========================================================================
-   4. Welcome Section
+   3. Page Layouts & Components
    ========================================================================== */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 3.5rem 1.5rem;
 }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 3rem;
-}
+.section-heading { text-align: center; margin-bottom: 2.5rem; }
+.section-heading span { font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; color: var(--primary-color); text-transform: uppercase; }
+.section-heading h2 { font-family: var(--font-heading); font-size: 2.2rem; color: var(--text-dark); }
+.divider { width: 60px; height: 3px; background-color: var(--accent-color); margin: 0.5rem auto 0; }
 
-.section-heading span {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--primary-color);
-  text-transform: uppercase;
-}
+/* Grid Helper */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
 
-.section-heading h2 {
-  font-family: var(--font-heading);
-  font-size: 2.2rem;
-  color: var(--text-dark);
-  margin: 0.2rem 0;
-}
-
-.divider {
-  width: 60px;
-  height: 3px;
-  background-color: var(--accent-color);
-  margin: 0.75rem auto 0;
-}
-
-.welcome-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2.5rem;
-  align-items: center;
-}
-
-.welcome-text p {
-  margin-bottom: 1.25rem;
-  font-size: 1.05rem;
-}
-
-.welcome-text p.vietnamese {
-  font-style: italic;
-  color: var(--text-muted);
-  border-left: 3px solid var(--accent-color);
-  padding-left: 1rem;
-  margin-top: 1.5rem;
-}
-
-/* Heritage Card */
-.heritage-card {
-  background-color: var(--bg-card);
+/* Cards & Content Elements */
+.card {
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 2.5rem 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition: transform var(--transition-speed);
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
-.heritage-card:hover {
-  transform: translateY(-5px);
+.timeline-item {
+  border-left: 3px solid var(--accent-color);
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.heritage-card .symbol {
-  font-family: var(--font-heading);
-  font-size: 3.5rem;
-  color: var(--primary-color);
-  line-height: 1;
-  margin-bottom: 0.5rem;
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.heritage-card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
 }
 
-.heritage-card p {
-  font-size: 0.9rem;
-  color: var(--text-muted);
+.btn-submit {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
-/* ==========================================================================
-   5. Footer
-   ========================================================================== */
+/* Footer */
 footer {
   background-color: #1a1a1a;
   color: #aaaaaa;
   text-align: center;
   padding: 1.5rem;
   font-size: 0.85rem;
-  margin-top: auto;
 }
 
-/* ==========================================================================
-   6. Mobile Responsive Design
-   ========================================================================== */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
+  .menu-toggle { display: block; }
   .nav-links {
-    display: none; /* Toggle this via JavaScript */
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -255,18 +186,7 @@ footer {
     width: 100%;
     background-color: var(--primary-color);
     padding: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 0.75rem 1.5rem;
-  }
-
-  .welcome-content {
-    grid-template-columns: 1fr;
-  }
+  .nav-links.active { display: flex; }
+  .nav-links a { padding: 0.75rem 1.5rem; }
 }
