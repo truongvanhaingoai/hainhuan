@@ -1,131 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Họ Trương Văn | Family Tree</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<nav class="navbar">
-
-    <div class="nav-container">
-
-        <div class="logo">Trương Văn</div>
-
-        <button class="menu-toggle" id="menuToggle">☰</button>
-
-        <div class="nav-links" id="navLinks">
-
-            <a href="index.html">Home</a>
-            <a href="history.html">History</a>
-            <a href="family.html">Family Tree</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="events.html">Events</a>
-            <a href="contact.html">Contact</a>
-
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1>HỌ TRƯƠNG TỘC</h1>
+            <p class="tagline">Hải Nhuận • Hải Ngoại</p>
+            <p class="vietnamese-tagline">Lưu giữ truyền thống • Tưởng nhớ tổ tiên • Kết nối các thế hệ</p>
         </div>
+    </header>
 
-    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Trương Văn</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="history.html">History</a>
+                <a href="family.html" class="active">Family Tree</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-</nav>
-
-<main>
-
-<section class="section family-tree">
-
-    <div class="container">
-
+    <main class="container">
         <div class="section-heading">
-
-            <span>OUR FAMILY</span>
-
-            <h1>Family Tree</h1>
-
+            <span>GENEALOGY</span>
+            <h2>Gia Phả Dòng Họ</h2>
             <div class="divider"></div>
-
         </div>
-
-        <p class="section-intro">
-            Our family tree documents the generations of the
-            Trương Văn family and helps future generations
-            understand their roots.
-        </p>
-
-        <div class="tree">
-
-            <div class="person ancestor">
-
-                <span class="generation-label">
-                    Generation I
-                </span>
-
-                <h2>Ông Bà Tổ</h2>
-
-                <p>Family Ancestors</p>
-
-            </div>
-
-            <div class="tree-line"></div>
-
-            <div class="person">
-
-                <span class="generation-label">
-                    Generation II
-                </span>
-
-                <h2>Thế Hệ Thứ Hai</h2>
-
-                <p>Family Members</p>
-
-            </div>
-
-            <div class="tree-line"></div>
-
-            <div class="person">
-
-                <span class="generation-label">
-                    Generation III
-                </span>
-
-                <h2>Thế Hệ Thứ Ba</h2>
-
-                <p>Family Members</p>
-
-            </div>
-
-            <div class="tree-line"></div>
-
-            <div class="person">
-
-                <span class="generation-label">
-                    Generation IV
-                </span>
-
-                <h2>Thế Hệ Thứ Tư</h2>
-
-                <p>Current Generation</p>
-
-            </div>
-
+        <div class="card">
+            <h3>Gen 1: Ancestors</h3>
+            <p>Information on the founding generation of the Trương lineage.</p>
         </div>
+    </main>
 
-    </div>
-
-</section>
-
-</main>
-
-<footer>
-    <p>© 2026 Họ Trương Văn. All Rights Reserved.</p>
-</footer>
-
-<script src="script.js"></script>
-
+    <footer><p>© 2026 Họ Trương Văn. All Rights Reserved.</p></footer>
+    <script src="script.js"></script>
 </body>
 </html>
