@@ -37,7 +37,7 @@ main { flex: 1; }
    ========================================================================== */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-              url('https://raw.githubusercontent.com/truongvanhaingoai/hainhuan/main/nhathomattien.jpg') center/cover no-repeat;
+              url('https://raw.githubusercontent.com/truongvanhaingoai/hainhuan/master/nhathomattien.jpg') center/cover no-repeat;
   color: #ffffff;
   text-align: center;
   padding: 4rem 1.5rem;
