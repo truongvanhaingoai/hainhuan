@@ -257,7 +257,7 @@ footer {
 .hero {
   /* Use GitHub raw link for images */
   background: linear-gradient(135deg, rgba(139, 0, 0, 0.85), rgba(70, 0, 0, 0.85)),
-              url('hhttps://github.com/truongvanhaingoai/hainhuan/YOUR_REPOSITORY/main/nha tho mat tien.jpg') center/cover no-repeat;
+              url('hhttps://github.com/truongvanhaingoai/hainhuan/main/nha tho mat tien.jpg') center/cover no-repeat;
 
   color: var(--bg-white);
   text-align: center;
