@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8b0000">
+    <meta name="description" content="Trang web chính thức của Họ Trương Văn – Hải Nhuận • Hải Ngoại.">
     <title>Họ Trương Văn | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="hero">
+    <header class="hero hero--home">
         <div class="hero-overlay">
             <h1>HỌ TRƯƠNG TỘC</h1>
+            <span class="orn"></span>
             <p class="tagline">Hải Nhuận • Hải Ngoại</p>
             <p class="vietnamese-tagline">Lưu giữ truyền thống • Tưởng nhớ tổ tiên • Kết nối các thế hệ</p>
         </div>
     </header>
 
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main">
         <div class="nav-container">
-            <div class="logo">Trương Văn</div>
-            <button class="menu-toggle" id="menuToggle">☰</button>
+            <a class="brand" href="index.html"><span class="brand-mark">家</span><span>Trương Văn</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
             <div class="nav-links" id="navLinks">
                 <a href="index.html" class="active">Home</a>
                 <a href="history.html">History</a>
@@ -32,42 +38,80 @@
     </nav>
 
     <main class="container">
-        <div class="section-heading">
-            <span>Chào Mừng</span>
-            <h2>WELCOME</h2>
-            <div class="divider"></div>
-        </div>
-        <div class="grid-2">
-            <div>
-                <p style="margin-top: 1rem;" class="vietnamese-tagline">Chào mừng quý vị đến với trang web chính thức của Họ Trương Văn - Hải Nhuận • Hải Ngoại. Nơi đây lưu giữ lịch sử, truyền thống, Kết nối các thế hệ.</p>
-                <p>Welcome to the official portal of the <strong>Họ Trương Văn</strong>. This platform preserves our lineage, ancestry details, and family archives for current and future generations.</p>
+        <!-- Welcome -->
+        <section class="section">
+            <div class="section-heading">
+                <span>Chào Mừng</span>
+                <h2>Welcome</h2>
+                <div class="divider"></div>
             </div>
-            <div class="card" style="text-align: center;">
-                <h3 style="color: var(--primary-color); font-size: 2rem;">家</h3>
-                <h4>Gia Đình</h4>
-                <p>Một cội nguồn – Một gia đình – Nhiều thế hệ</p>
+            <div class="grid-2">
+                <div class="welcome-text">
+                    <p class="vietnamese-text">Chào mừng quý vị đến với trang web chính thức của Họ Trương Văn - Hải Nhuận • Hải Ngoại. Nơi đây lưu giữ lịch sử, truyền thống, kết nối các thế hệ.</p>
+                    <p>Welcome to the official portal of the <strong>Họ Trương Văn</strong>. This platform preserves our lineage, ancestry details, and family archives for current and future generations.</p>
+                </div>
+                <div class="card kanji-card">
+                    <div class="kanji">家</div>
+                    <h4>Gia Đình</h4>
+                    <p>Một cội nguồn – Một gia đình – Nhiều thế hệ</p>
+                </div>
             </div>
-            <p></p>
-        <div class="section-heading">
-            <span>THƯ MỜI</span>
-            <h2>Invitaion</h2>
-            <div class="divider"></div>
-            <p style="margin-top: 1rem;" class="vietnamese-tagline">Nhân ngày tế lễ giỗ tổ họ Trương hàng năm, cũng để thắt chặt tình thân của bà con nội ngoại trong họ tộc Trương Văn.  Xin trân trọng kính mời: quý Bác, quý Chú Thím, quý O Dượng cùng con Cháu Nội, Ngoại đến tham dự ngày tế lễ họ Trương hàng năm.</p>
-            <p>On the occasion of the Annual Truong Family Ancestry Memorial Day, and to honor and strengthen the bonds among our paternal and maternal relatives of the Truong Van clan.  We respectfully invites: Uncles, Aunts, Cousins, and Grandchildren to attend the Annual Truong Family Ancestry Memorial Day. </p>
-            <p></p>
-            <p>Địa điểm: Los Cerritos Community Center and Park, 3377 Alder Ave, Fremont CA 94536</p>
-            <p>Thời Gian: 11:30 AM Chủ Nhật, Ngày 7 Tháng 12, 2025 (Nhằm Ngày 18 Tháng 10 Năm Ất Tỵ)</p>
-            <p></p>
-            <p>Sự hiện diện của quý bà con nội ngoại là niềm vinh dự lớn lao, góp phần làm nên thành công cho ngày Lễ Giỗ Tổ Họ Trương.  Rất mong được đón tiếp qúy bà con.</p>
-            <p>Your presence is a great honor, contributing to success of Truong Family Ancestry Memorial Day.  We look forward to welcoming you.</p>
-            <p></p>
-            <p>Kính Mời</p>
-            <p>Tộc Trưởng</p>
-            <p>Trương Tiềm</p>
-            <p>California, USA</p>
-        </div>
-            
-        </div>
+        </section>
+
+        <!-- Quick links -->
+        <section class="section">
+            <div class="grid-3">
+                <a class="tile" href="history.html"><span class="ico">📜</span><h3>Lịch Sử</h3><p>History of the lineage</p></a>
+                <a class="tile" href="gallery.html"><span class="ico">🖼️</span><h3>Thư Viện Ảnh</h3><p>Photos &amp; memories</p></a>
+                <a class="tile" href="video.html"><span class="ico">🎬</span><h3>Thước Phim</h3><p>Videos &amp; recordings</p></a>
+            </div>
+        </section>
+
+        <!-- Invitation -->
+        <section class="section">
+            <div class="section-heading">
+                <span>Thư Mời</span>
+                <h2>Invitation</h2>
+                <div class="divider"></div>
+            </div>
+
+            <article class="invite">
+                <p class="clan">HỌ TRƯƠNG TỘC HẢI NHUẬN</p>
+                <p class="region">Bắc California</p>
+                <h3>THƯ MỜI</h3>
+                <span class="countdown" id="countdown" data-date="2026-11-22T11:30:00-08:00"></span>
+
+                <p>Nhân ngày tế lễ Giỗ Tổ Họ Trương hằng năm, nhằm tưởng nhớ công đức tổ tiên, gìn giữ và phát huy những truyền thống tốt đẹp của gia tộc, xin trân trọng kính mời: quý Bác, quý Chú Thím, quý O Dượng cùng con cháu nội, ngoại đến tham dự ngày tế lễ họ Trương hàng năm.</p>
+                <p class="en">On the occasion of the Annual Truong Family Ancestry Memorial Day, and to honor and strengthen the bonds among our paternal and maternal relatives of the Truong Van clan, we respectfully invite: Uncles, Aunts, Cousins, and Grandchildren to attend the Annual Truong Family Ancestry Memorial Day.</p>
+
+                <div class="invite-details">
+                    <div>
+                        <h4>Địa điểm • Location</h4>
+                        <p>Warm Springs Community Center and Park<br>
+                        <small>47300 Fernald Street, Fremont, CA 94539</small></p>
+                    </div>
+                    <div>
+                        <h4>Thời gian • Time</h4>
+                        <p>11:30 AM, Chủ Nhật, 22/11/2026<br>
+                        <small>Nhằm ngày 14 tháng 10 năm Bính Ngọ</small></p>
+                    </div>
+                </div>
+
+                <p>Sự hiện diện của quý bà con nội ngoại là niềm vinh dự lớn lao, góp phần làm nên thành công cho ngày Lễ Giỗ Tổ Họ Trương. Rất mong được đón tiếp quý bà con.</p>
+                <p class="en">Your presence is a great honor, contributing to the success of Truong Family Ancestry Memorial Day. We look forward to welcoming you.</p>
+
+                <div class="btn-row">
+                    <a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=47300+Fernald+Street+Fremont+CA+94539">📍 Get Directions</a>
+                    <a class="btn btn-outline" href="contact.html">✉ Contact Us</a>
+                </div>
+
+                <div class="signoff">
+                    <p class="title">Kính Mời • Tộc Trưởng</p>
+                    <p class="name">Trương Tiềm</p>
+                    <p class="title">California, USA</p>
+                </div>
+            </article>
+        </section>
     </main>
 
     <footer><p>© 2026 Họ Trương Văn. All Rights Reserved.</p></footer>
