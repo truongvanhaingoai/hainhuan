@@ -1,31 +1,36 @@
-S<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8b0000">
     <title>Họ Trương Văn | Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="hero">
         <div class="hero-overlay">
             <h1>HỌ TRƯƠNG TỘC</h1>
+            <span class="orn"></span>
             <p class="tagline">Hải Nhuận • Hải Ngoại</p>
             <p class="vietnamese-tagline">Lưu giữ truyền thống • Tưởng nhớ tổ tiên • Kết nối các thế hệ</p>
         </div>
     </header>
 
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main">
         <div class="nav-container">
-            <div class="logo">Trương Văn</div>
-            <button class="menu-toggle" id="menuToggle">☰</button>
+            <a class="brand" href="index.html"><span class="brand-mark">家</span><span>Trương Văn</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
             <div class="nav-links" id="navLinks">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html">Home</a>
                 <a href="history.html">History</a>
                 <a href="family.html">Family Tree</a>
                 <a href="gallery.html">Gallery</a>
                 <a href="video.html">Videos</a>
-                <a href="events.html">Events</a>
+                <a href="events.html" class="active">Events</a>
                 <a href="contact.html">Contact</a>
             </div>
         </div>
@@ -33,16 +38,44 @@ S<!DOCTYPE html>
 
     <main class="container">
         <div class="section-heading">
-            <span>GATHERINGS</span>
-            <h2>Sự Kiện & Giỗ Tổ</h2>
+            <span>Gatherings</span>
+            <h2>Sự Kiện &amp; Giỗ Tổ</h2>
             <div class="divider"></div>
         </div>
-        <div class="card">
-            <h3>Annual Ancestral Memorial Gathering</h3>
-            <p><strong>Date:</strong> Sunday, November 22, 2026 @ Fremont USA</p>
-            <h3>Ngày Chạp Họ Tộc</h3>
-            <p><strong>Date:</strong> Thứ Ba, Ngày 16 Tháng, 10 Năm 2026 tại Tổ Danh Phố Phong Hải Phường Phong Quảng Thành Phố Huế</p>
-            
+
+        <div class="events">
+            <article class="card event">
+                <div class="date-block">
+                    <span class="d">22</span>
+                    <span class="m">Tháng 11</span>
+                    <span class="y">2026</span>
+                </div>
+                <div>
+                    <h3>Annual Ancestral Memorial Gathering</h3>
+                    <p class="vietnamese-text">Lễ Giỗ Tổ Họ Trương hằng năm • Bắc California</p>
+                    <div class="meta">
+                        <span><b>Date:</b> Sunday, November 22, 2026 • 11:30 AM</span>
+                        <span><b>Âm lịch:</b> 14 tháng 10 năm Bính Ngọ</span>
+                        <span><b>Location:</b> Warm Springs Community Center and Park, 47300 Fernald Street, Fremont, CA 94539</span>
+                    </div>
+                    <a class="btn" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=47300+Fernald+Street+Fremont+CA+94539">📍 Get Directions</a>
+                </div>
+            </article>
+
+            <article class="card event">
+                <div class="date-block">
+                    <span class="d">16</span>
+                    <span class="m">Tháng 10 ÂL</span>
+                    <span class="y">2026</span>
+                </div>
+                <div>
+                    <h3>Ngày Chạp Họ Tộc</h3>
+                    <div class="meta">
+                        <span><b>Date:</b> Thứ Ba, Ngày 16 Tháng 10 Năm 2026</span>
+                        <span><b>Địa điểm:</b> Tổ Danh Phố Phong Hải, Phường Phong Quảng, Thành Phố Huế</span>
+                    </div>
+                </div>
+            </article>
         </div>
     </main>
 
