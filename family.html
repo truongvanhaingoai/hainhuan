@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8b0000">
     <title>Họ Trương Văn | Family Tree</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="hero">
         <div class="hero-overlay">
             <h1>HỌ TRƯƠNG TỘC</h1>
+            <span class="orn"></span>
             <p class="tagline">Hải Nhuận • Hải Ngoại</p>
             <p class="vietnamese-tagline">Lưu giữ truyền thống • Tưởng nhớ tổ tiên • Kết nối các thế hệ</p>
         </div>
     </header>
 
-     <nav class="navbar">
+    <nav class="navbar" aria-label="Main">
         <div class="nav-container">
-            <div class="logo">Trương Văn</div>
-            <button class="menu-toggle" id="menuToggle">☰</button>
+            <a class="brand" href="index.html"><span class="brand-mark">家</span><span>Trương Văn</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
             <div class="nav-links" id="navLinks">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html">Home</a>
                 <a href="history.html">History</a>
-                <a href="family.html">Family Tree</a>
+                <a href="family.html" class="active">Family Tree</a>
                 <a href="gallery.html">Gallery</a>
                 <a href="video.html">Videos</a>
                 <a href="events.html">Events</a>
@@ -33,14 +38,59 @@
 
     <main class="container">
         <div class="section-heading">
-            <span>GENEALOGY</span>
+            <span>Genealogy</span>
             <h2>Gia Phả Dòng Họ</h2>
             <div class="divider"></div>
         </div>
-        <div class="card">
-            <h3>Gen 1: Ancestors</h3>
-            <p>Information on the founding generation of the Trương lineage.</p>
+
+        <div class="lineage">
+            <div class="card gen-card">
+                <div class="gen-badge"><small>Thỉ Tổ</small><b>I</b></div>
+                <div>
+                    <h3>Trương Phóng (Trương Tích)</h3>
+                    <p class="years">Thám hoa • Giáp Thìn, Hưng Long 12 (1304)</p>
+                    <p>Thỉ tổ của họ, đỗ đại khoa dưới thời vua Trần Anh Tông.</p>
+                </div>
+            </div>
+
+            <div class="card gen-card">
+                <div class="gen-badge"><small>Liệt Tổ</small><b>Lôi • Chiến</b></div>
+                <div>
+                    <h3>Trương Lôi &amp; Trương Chiến</h3>
+                    <p class="years">1385–1462 • 1405–?</p>
+                    <p>Hai cha con thuộc 18 vị trong Hội Thề Lũng Nhai của Bình Định Vương Lê Lợi; Bình Ngô Khai quốc công thần dưới thời Lê sơ.</p>
+                </div>
+            </div>
+
+            <div class="card gen-card">
+                <div class="gen-badge"><small>Đời</small><b>4</b></div>
+                <div>
+                    <h3>Trương Phi Phong</h3>
+                    <p class="years">1444–1516 • Đô Chỉ Huy Sứ Ty</p>
+                    <p>Tham gia bình Chiêm tại thành Đồ Bàn (1470–1471); cùng 5 vị tướng ở lại lập nghiệp, dựng nên làng Vân Quật Thượng.</p>
+                </div>
+            </div>
+
+            <div class="card gen-card">
+                <div class="gen-badge"><small>Đời</small><b>9</b></div>
+                <div>
+                    <h3>Trương Mượn &amp; trưởng tử Trương Hanh</h3>
+                    <p class="years">Ất Mão (1675)</p>
+                    <p>Dòng họ chia thành 3 nhánh. Ngài Trương Mượn cùng trưởng tử Trương Hanh định cư lập nghiệp tại xóm Đoài xưa, nay là Hải Nhuận.</p>
+                </div>
+            </div>
+
+            <div class="card gen-card">
+                <div class="gen-badge"><small>Hải Ngoại</small><b>XI+</b></div>
+                <div>
+                    <h3>Con cháu hiện nay</h3>
+                    <p class="years">Hoa Kỳ • Úc Châu • Canada</p>
+                    <p>Từ thế hệ XI trở về sau định cư tại California cùng các bang và các nước khác; nội ngoại khoảng trên 200 gia đình.</p>
+                </div>
+            </div>
         </div>
+
+        <p class="vietnamese-text" style="text-align:center; margin-top:2rem;">Gia phả chi tiết theo từng đời sẽ được cập nhật tại đây.</p>
     </main>
 
     <footer><p>© 2026 Họ Trương Văn. All Rights Reserved.</p></footer>
