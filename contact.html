@@ -2,21 +2,22 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#8b0000">
     <title>Họ Trương Văn | Contact</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="hero">
+    <header class="hero ">
         <div class="hero-overlay">
             <h1>HỌ TRƯƠNG TỘC</h1>
             <span class="orn"></span>
             <p class="tagline">Hải Nhuận • Hải Ngoại</p>
             <p class="vietnamese-tagline">Lưu giữ truyền thống • Tưởng nhớ tổ tiên • Kết nối các thế hệ</p>
+
         </div>
     </header>
 
@@ -29,6 +30,8 @@
                 <a href="history.html">History</a>
                 <a href="family.html">Family Tree</a>
                 <a href="gallery.html">Gallery</a>
+                <a href="ScholarshipStudyPromotionProgram.html">Scholarship</a>
+                <a href="JournalLibrary.html">Journal</a>
                 <a href="video.html">Videos</a>
                 <a href="events.html">Events</a>
                 <a href="contact.html" class="active">Contact</a>
@@ -37,36 +40,40 @@
     </nav>
 
     <main class="container">
+
         <div class="section-heading">
             <span>Get In Touch</span>
             <h2>Liên Hệ</h2>
             <div class="divider"></div>
         </div>
-
         <form class="card form-card" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="b94119d8-9dde-4827-b743-5103b9d5c046">
-
-            <div class="form-group">
-                <label for="name">Your Name / Họ Tên</label>
-                <input type="text" id="name" name="name" autocomplete="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" autocomplete="email" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone / Số Điện Thoại (không bắt buộc)</label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel">
-            </div>
-            <div class="form-group">
-                <label for="message">Message / Lời Nhắn</label>
-                <textarea id="message" name="message" rows="5"></textarea>
-            </div>
+            <div class="form-group"><label for="name">Your Name / Họ Tên</label>
+                <input type="text" id="name" name="name" autocomplete="name" required></div>
+            <div class="form-group"><label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required></div>
+            <div class="form-group"><label for="phone">Phone / Số Điện Thoại (không bắt buộc)</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel"></div>
+            <div class="form-group"><label for="message">Message / Lời Nhắn</label>
+                <textarea id="message" name="message" rows="5"></textarea></div>
             <button type="submit" class="btn-submit">Send Message • Gửi</button>
         </form>
     </main>
 
-    <footer><p>© 2026 Họ Trương Văn. All Rights Reserved.</p></footer>
+    <footer>
+        <nav class="footer-links" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="history.html">History</a>
+            <a href="family.html">Family Tree</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="ScholarshipStudyPromotionProgram.html">Scholarship</a>
+            <a href="JournalLibrary.html">Journal</a>
+            <a href="video.html">Videos</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p>© 2026 Họ Trương Văn. All Rights Reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
